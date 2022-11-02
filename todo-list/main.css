@@ -1,0 +1,21 @@
+#title {
+    color : red
+}
+.title2{
+    font-size: 200%;
+}
+
+p > span {
+    color : cornflowerblue
+}
+
+.layout{
+    background: blueviolet;
+    width:300px;
+    height: 300px;
+    border: 20px solid springgreen
+}
+.target{
+    color: whitesmoke
+}
+
