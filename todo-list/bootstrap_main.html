@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./bootstrap_main.css"/>
@@ -23,19 +23,9 @@
         <h3 id="title">간단한 TODO 리스트</h3>
         <div id="subcontainer">
             <ul class="list-group" id="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group-item">
                   오늘의 할 일 하나 !
-                  <span class="badge badge-primary badge-pill">완료</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  오늘의 할 일 둘 !
-                  <span class="badge badge-primary badge-pill">완료</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  오늘의 할 일 셋 !
-                  <span class="badge badge-primary badge-pill">완료</span>
+                  <span class="badge badge-primary badge-pill" onclick="deleteTodo()">완료</span>
                 </li>
               </ul>
         </div>
@@ -45,15 +35,57 @@
             
             aria-describedby="button-addon2">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="x()">일정 추가</button>
+              <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="addTodo()">일정 추가</button>
             </div>
           </div>
     </div>
 <script>
-    console.log("Good life")
-    function x(){
-        alert("Good life!")
+    //웹페이지가 실행 되면 내부에 담긴 함수가 실행되게 만든다.
+    //제이쿼리는 ajax를 사용하기 때문에 시작하자 마자 데이터 받아오기.
+
+    $(document).ready(function(){
+        console.log("환영합니다")
+        $.ajax({
+            //개발자가 정해놓은 웹사이트 주소
+            url:"https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&page=1",
+            data:{},
+            // GET 방식으로 서버 데이터를 받아온다
+            //만약 POST 방식으로 진행하고 싶으면, type:"POST" 로 바꾸고,
+            // data 에 {"key":"value"} 값 기입
+            type:"GET",
+            success:function(json){
+                console.log(json)
+            },
+            error:function(err){
+            }
+        })
+    })
+
+    function addTodo(){
+        let todo = $("#input-area").val();
+        console.log(todo);
+
+        //li 태그에 고유의 아이디 값을 주기 위해
+        //floor 는 반올림
+        let id = Math.floor(Math.random() * 100000)
+        console.log(id)
+        
+        //고유한 아이디로 아이디 추가 
+        let list_item = `<li class="list-group-item d-flex justify-content-between align-items-center list-${id}" id="list-group-item">
+                  ${todo}
+                  <span class="badge badge-primary badge-pill" onclick="deleteTodo(${id})">완료</span>
+        </li>`
+
+        $("#list-group").append(list_item)
+
+        //새로운 일정을 추가하고 난 뒤, 초기화
+        $("#input-area").val('')
     }
+
+    function deleteTodo(id){
+        $(".list-"+id).remove()
+    }
+    
 </script>
 </body>
 </html>
