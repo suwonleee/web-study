@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./bootstrap_main.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="container">
+        <h3 id="title">간단한 TODO 리스트</h3>
+        <div id="subcontainer">
+            <ul class="list-group" id="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group">
+                  오늘의 할 일 하나 !
+                  <span class="badge badge-primary badge-pill">완료</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  오늘의 할 일 둘 !
+                  <span class="badge badge-primary badge-pill">완료</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  오늘의 할 일 셋 !
+                  <span class="badge badge-primary badge-pill">완료</span>
+                </li>
+              </ul>
+        </div>
+        <div class="input-group mb-3" id="input-group">
+            <input type="text" class="form-control"
+            id="input-area" placeholder="새로운 일정을 추가하려면 여기에 적어주세요" 
+            
+            aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="x()">일정 추가</button>
+            </div>
+          </div>
+    </div>
+<script>
+    console.log("Good life")
+    function x(){
+        alert("만세!")
+    }
+</script>
+</body>
+</html>
