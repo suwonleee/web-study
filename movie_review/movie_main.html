@@ -68,7 +68,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <script>
-            let target_id = 0;
+            let target_movie = 0;
             $(document).ready(function(){
                 console.log("환영합니다")
 
@@ -104,11 +104,11 @@
                 })
             })                          
             function review(id){
-                target_id = id
+                target_movie = id
                 $.ajax({
-                    url:`https://universalapi.net/review/list?movie_id=${id}`,
-                    data:{},
-                    type:"GET",
+                    url:`https://universalapi.net/review/list?movie_id=${target_movie}`,// 클라이언트가 요청을 보낼 서버의 URL 주소
+                    data:{}, // HTTP 요청과 함께 서버로 보낼 데이터 POST 방식에서만 사용
+                    type:"GET",// HTTP 요청 방식(GET, POST)
                     success:function(json){
                         console.log(json.data)
                         let reviews = json.data;
@@ -116,7 +116,11 @@
                         for(let i=0; i<reviews.length; i++){
                             $(".modal-body").append(`<p>${reviews[i].review}</p>`)
                         }
+                    },
+                    error:function(e){
+
                     }
+                    
 
                 })
                 $('#review_modal').modal('show')
@@ -127,22 +131,25 @@
                 let review_html = `<p>${review}</p>`
 
                 $.ajax({
-                    url:`http://universalapi.net/review/add`,
+                    url:`http://universalapi.net/review/add`,// 클라이언트가 요청을 보낼 서버의 URL 주소
                     data:{
-                        movie_id:target_id,
+                        movie_id:target_movie,
                         review:review_html
-                    },
-                    type:"POST",
+                    },// HTTP 요청과 함께 서버로 보낼 데이터 POST 방식에서만 사용
+                    type:"POST",// HTTP 요청 방식(GET, POST)
                     success:function(json){
-                        console.log(json)
+
+                    },
+                    error:function(e){
+
                     }
                 
                 })
 
                 $(".modal-body").append(review_html);
-                $("#review").val();   
+                $("#review").val('');   
             }
             
-        </script>
+</script>
 </body>
 </html>
