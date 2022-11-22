@@ -14,6 +14,9 @@
             border : 1px solid #333;
             width: 200px;
         }
+        input{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -34,8 +37,9 @@
      <br>
      <img src="https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg" alt="">
      <br>
+     <br>
 
-     <!-- ** 표 불러오기 -->
+     <!-- ** 표 만들기 -->
         <table>
             <caption>제목을 쓸 땐 캡션</caption>
             <thead>
@@ -68,12 +72,87 @@
                 </tr>
             </tbody>
         </table>
-     <!-- ** 리스트 -->
+        <br>
+        <br>
+
+     <!-- ** input 예시 -->
+     <form action="">
+
+        <input type="text" placeholder="placeholder 예시...">
+        <input type="text" placeholder="type=text는 문자만...">
+        <input type="number" placeholder="type=number는 숫자만..." max="10">
+        <input type="password" placeholder="password는 입력하면 가려진다...">
+        <input type="date" placeholder="연도 / 월 / 일" name="" id="" >
+        <br>
+        <label for="nick"> 닉네임: </label>
+        <input id="nick" ype="text" placeholder="닉네임을 입력하세요...">
+        
+        <br>
+        <input type="range" name="" id="">
+        <textarea name="" id="" cols="30" rows="10">
+
+        </textarea>
+     </form>
+     
 
 
-     <!-- ** 리스트 -->
+     <!-- ** div / span 예시 -->
+     <div style="border: 1px solid salmon">
+        <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+        <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+        <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+     </div>
+     <p><span style="color:blueviolet">동해물과 백두산이 마르고 닳도록</span> 하느님이 보우하사 우리나라 만세</p>
+     <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
 
+     <!-- ** header -->
+     <!-- ** 글을 실제로 작성할 때 대부분 통용되는 규격 -->
 
-     <!-- ** 리스트 -->
+     <header>
+        <h1>h1은 큰 제목을 작성</h1>
+        <nav>
+            <li>1번. nav는 이렇게   </li>
+            <li>2번. 목록 칸을 </li>
+            <li>3번. 작성할 때 쓰인다.</li>
+        </nav>
+     </header>
+     <section>
+        <article>
+            섹션 안에는 이렇게 아티클이 들어가기도 하고,
+        </article>
+        <section>
+            섹션도 또 들어가기도 하고,
+        </section>
+     </section>
+     <section>
+        <h2>
+            1번. 목록 소제목은 h2
+        </h2>
+        <p>
+            h1을 위에 썼으니 h2를 작성하고 본문은 p를 써줍니다.
+        </p>
+     </section>
+     <section>
+        <h2>
+            2번. 목록 소제목은 h2
+        </h2>
+        <p>
+            h1을 위에 썼으니 h2를 작성하고 본문은 p를 써줍니다.
+        </p>
+     </section>
+     <section>
+        <h2>
+            3번. 목록 소제목은 h2
+        </h2>
+        <p>
+            h1을 위에 썼으니 h2를 작성하고 본문은 p를 써줍니다.
+        </p>
+     </section>
+     <aside>
+        측면에 무언가를 작성할 땐 aside 
+     </aside>
+     <footer>
+        footer 에는 주소, 회사 주소지 같은걸 작성하게 됩니다.
+     </footer>
 </body>
 </html>
