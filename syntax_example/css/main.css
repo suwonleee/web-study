@@ -1,8 +1,21 @@
-
+/* ------------------------------------------------------------ */
+/* ----------- A. 기본적인 쓰임 확인 -------- */
+/* ------------------------------------------------------------ */
 p{
     color: royalblue;
 }
+h1 {
+    border:3px solid blueviolet;
+    border-radius: 10%; /* 50% 는 원 */
+    width: 200px;
+    height: 200px;
+    text-align: right;
+    line-height: 50px;
+}
 
+/* ------------------------------------------------------------ */
+/* ----------- B. class / id 차이 확인 -------- */
+/* ------------------------------------------------------------ */
 /* div 안에 p태그 요소만 따로 꾸미기 */
 div > p {
     border: 2px solid darkgreen;
@@ -37,6 +50,7 @@ div > p:nth-child(3) {
 }
 
 /* ------------------------------------------------------------ */
+/* -----------C. margin padding 차이 확인 -------- */
 /* ------------------------------------------------------------ */
 
 /* 전체 설정 (기본 설정을 초기화 하는) */
@@ -44,14 +58,7 @@ div > p:nth-child(3) {
     margin: 0;
     padding: 0;
 }
-h1 {
-    border:3px solid blueviolet;
-    border-radius: 10%; /* 50% 는 원 */
-    width: 200px;
-    height: 200px;
-    text-align: right;
-    line-height: 50px;
-}
+
 ul {
     list-style: none;
     border: 1px solid red;
@@ -85,4 +92,38 @@ li {
 }
 .list-6 {
     padding: 5px 5px 20px 20px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* -----------      D. flex   --------------------------------- */
+/* -- float 없이 정렬 / 반응형 친화적 / 자식 요소 위치 잡기가 쉬움 -------- */
+/* -- 마진에서 자유로움 / 작은 단위의 레이아웃을 잡을때  -------- */
+/* ------------------------------------------------------------ */
+.flex-list {
+    border: none;
+    overflow: hidden;
+    position: relative;
+}ßß
+.flex-list > p {
+    border: none;
+    color: black;
+    overflow: hidden;
+    float: left;
+    position: relative;
+
+}
+
+.container-1 {
+    display:flex;
+}
+
+.box-1 {
+    flex: 1;
+}
+.box-2 {
+    flex: 2;
+}
+.box-3 {
+    flex: 3;
 }
