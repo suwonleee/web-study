@@ -1,0 +1,88 @@
+
+p{
+    color: royalblue;
+}
+
+/* div 안에 p태그 요소만 따로 꾸미기 */
+div > p {
+    border: 2px solid darkgreen;
+    color: crimson;
+}
+
+/* 홀수번째 요소만 따로 꾸미기 */
+div > p:nth-child(odd) {
+    color: gold;
+}
+
+/* 짝수번째 요소만 따로 꾸미기 */
+div > p:nth-child(even) {
+    color: coral;
+}
+
+/* 3번째 요소만 따로 꾸미기 */
+div > p:nth-child(3) {
+    color: violet;
+}
+
+/* 클래스(class)로 선택하기 */
+#outer-p {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+/* 아이디(id)로 선택하기 */
+.inner-p {
+    text-decoration: line-through;
+    text-decoration-color: blue;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+/* 전체 설정 (기본 설정을 초기화 하는) */
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    border:3px solid blueviolet;
+    border-radius: 10%; /* 50% 는 원 */
+    width: 200px;
+    height: 200px;
+    text-align: right;
+    line-height: 50px;
+}
+ul {
+    list-style: none;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+/* float*/
+li {
+    font-size: 24px;
+    border: 1px solid #333333;
+    float:left;
+}
+
+/* margin, padding */
+.list-1 {
+    margin:20px;
+}
+.list-2 {
+    padding:20px;
+}
+.list-3 {
+    margin-left:10px;
+    margin-top:10px;
+}
+.list-4 {
+    padding-left:10px;
+    padding-top:10px;
+}
+.list-5 {
+    margin: 5px 5px 20px 20px;
+}
+.list-6 {
+    padding: 5px 5px 20px 20px;
+}
