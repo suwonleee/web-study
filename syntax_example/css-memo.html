@@ -7,7 +7,7 @@
     <title>Basic CSS Usage</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="basic">
     <!-- ** 리스트 -->
     <h2> A. 기본적인 쓰임 </h2>
     <h1> Basic CSS Usage </h1>
@@ -16,7 +16,7 @@
 
     <h2> B. class / id 차이 확인  </h2>
     <p id="outer-p">Outer p tag</p>
-    <div>
+    <div class="lorem-ex">
         <p class="inner-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p class="inner-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p class="inner-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -31,40 +31,214 @@
         <li class="list-2"> 2. 패딩20</li>
         <li class="list-3"> 3. 마진렢,탑10</li>
         <li class="list-4"> 4. 패딩렢,탑10</li>
-        <li class="list-5"> 5. 마진왼오위아래</li>
-        <li class="list-6"> 5. 패딩왼오위아래</li>
+        <li class="list-5"> 5. 마진왼오위아</li>
+        <li class="list-6"> 5. 패딩왼오위아</li>
     </ul>
     <br>
     <br>
 
     <h2> D. flex 차이 확인 </h2>
-    <div class="container-1">
-        <li class="flex-list">flex</li>
-        <br>
-        <br>
-        <div class="box-1">
-            <h3>flex의 특징</h3>
-            <p> 특징1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
-                / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때  </p>
+    <br>
+    <div class="total-1">
+        <div class="container-1">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>align-items: center; = 가운데 </h2>
                 <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
                 <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
         </div>
-        
-        <div class="box-2">
-            <h3>flex 분류</h3>
-
-            <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+<br>
+        <div class="container-2">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>align-items: flex-end; = 끝라인</h2>
+                <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
+                <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
+        </div>
         <br>
+        <div class="container-3">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>align-items: stretch = 쭉 펴는 </h2>
+                <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
+                <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
+        </div>
         <br>
+        <div class="container-4">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>justify-content: center; 컨텐츠를 화면 가운데로 </h2>
+                <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
+                <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
         </div>
-        
-
-        <div class="box-3">
-            <h3>flex 분류</h3>
-            <p> B. flex-grow / flex-shrink / flex / order  </p>
+        <br>
+        <div class="container-5">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>justify-content: space-evenly; </h2>
+                <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
+                <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
         </div>
-        
+        <br>
+        <div class="container-6">
+            <br>
+            <br>
+            <div class="box-1">
+                <h2>flex-direction: column; 세로로 </h2>
+                <br>
+                <p> flex의 특징 1. float 없이 정렬 / 2. 반응형 친화적 / 3. 자식 요소 위치 잡기가 쉬움
+                    / 4. 마진에서 자유로움 / 5. 작은 단위의 레이아웃을 잡을때 
+                요약하자면 반응형 화면을 구성할 때 필수이므로, 자유자재로 활용할 줄 알아야한다.<br>
+                결국 이러한 활용 이해도의 차이가 사용자에게 편리함과 트렌디한 웹페이지 경험을 만들어낸다. 그렇기에 이렇게 차곡차곡 
+                flex 관련 글을 정리한다.</p>
+                    <br>
+                    <br>
+            </div>
+            <div class="box-2">
+                <h3>flex 분류 첫번째</h3>
+                <br>
+                <p> A. display / flex-direction / flex-wrap / flex-basis / justify-contents / align-self / align-items / align-contents  </p>
+            <br>
+            <br>
+            </div>
+            <div class="box-3">
+                <h3>flex 분류 두번째</h3>
+                <br>
+                <p> B. flex-grow / flex-shrink / flex / order  </p>
+            </div>
+        </div>
     </div>
-    
+    <br>
+        <!-- ** 구성을 메뉴 , 로고 구성으로 만들어보기 -->
+    <div class="facebook">
+        <h1>Logo</h1>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+    </div>
+        <!-- ** 구성을 메뉴 , 로고 구성으로 만들어보기 -->
+    <div class="wrapper">
+        <div class="item1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+        <div class="item2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+        <div class="item3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+        <div class="item4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+        <div class="item5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+        <div class="item6">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatibus dignissimos nemo est illum amet.
+        </div>
+    </div>
 </body>
 </html>
