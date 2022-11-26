@@ -221,6 +221,9 @@
 
     grid-gap: 50px;
     /* -- 각 grid를 얼마나 떨어뜨려놓을건지  -- */
+
+    grid-auto-rows: minmax(300px, auto);
+    /* -- 그리드를 최소 300px 픽셀씩 먹고 그 이상으론 자동   -- */
 }
 
 .wrapper > div {
@@ -229,4 +232,12 @@
 }
 .wrapper > div:nth-child(odd) {
     background-color: #9e9e9e;
+ }
+ .wrapper > .item1 {
+    grid-column: 1/4;     /* -- 가로 1부터 3까지 영역을 차지한다.  -- */
+
+ }
+ .wrapper > .item6 {
+    grid-column: 4/5;   /* -- 가로로 4번 5번.  -- */
+    grid-row: 1/4;     /* -- 세로 1부터 3까지 영역을 차지한다.  -- */
  }
