@@ -1,1 +1,1 @@
-h1{color:#ff4500}ul{border:1px solid #4169e1}ul li{color:#006400}
+button{display:block;border-radius:5px;padding:8px 20px;margin:50px;background:#055671;color:#fff}button:hover{transform:scale(0.9)}*{margin:0;padding:0;list-style:none}.wrapper{display:flex;flex-direction:column}.wrapper header{color:#fff;display:flex;height:50px;align-items:center;justify-content:space-between;background:#055671}.wrapper header h1{font-size:25px}.wrapper nav{color:#055671}.wrapper nav ul{display:flex}
