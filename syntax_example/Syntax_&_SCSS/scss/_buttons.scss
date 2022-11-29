@@ -1,0 +1,14 @@
+button {
+    display: block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 50px;
+    background: $primary-color;
+    color:$primary-text;
+    &:hover {
+        //버튼 안에 호버를 설정할 때 &
+        //일반적으로 크기를 설정
+        transform: scale(0.9);
+    }
+
+}

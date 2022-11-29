@@ -1,0 +1,30 @@
+// 외부 파일에서 해당 속성을 컨트롤 해줄 수 있다.
+@import "config";
+@import "buttons";
+
+*{ // 기본 전체 설정
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    header { // 위에 타이틀 부분 설정
+        color: $primary-text;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        background: $primary-color;
+        h1 {
+            font-size: 25px;
+        }
+    }
+    nav {  // 목록 버튼 
+        color: $primary-color;
+        ul {
+            display: flex;
+        }
+    }
+}
