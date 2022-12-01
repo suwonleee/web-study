@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.header {
+    color:#fff;
+    background: linear-gradient(100deg,#8360c3, #2ebf91); /* 글씨 그레디언트 주기 */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.input-box > label {
+    display: none;
+}
+.input-box > input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+}
+/* 밑에 선 긋기 */
+.todo-list li { 
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.todo-like {
+    flex: 1;
+}
+.todo-item {
+    flex: 8;
+}
+.todo-manage {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.like {
+    cursor: pointer;
+    font-size: 18px !important;
+    color: orangered
+}
+.check {
+    color: #2ebf91;
+}
+.clear {
+    color: #8360c3;
+}
