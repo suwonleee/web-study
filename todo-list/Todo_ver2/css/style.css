@@ -12,9 +12,10 @@
 }
 .header {
     color:#fff;
-    background: linear-gradient(100deg,#8360c3, #2ebf91); /* 글씨 그레디언트 주기 */
+    /* 글씨 배경 그레디언트 */
+    background: linear-gradient(100deg,#8360c3, #2ebf91); 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 양쪽으로 글씨 배치 */
     padding: 1rem;
     align-items: center;
 }
@@ -33,8 +34,11 @@
     display: flex;
     align-items: center;
 }
+
+/* flex 비율 조율하기 */
 .todo-like {
     flex: 1;
+    padding-left: 2rem;
 }
 .todo-item {
     flex: 8;
@@ -42,7 +46,7 @@
 .todo-manage {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 위치 조정해주기 */
 }
 .like {
     cursor: pointer;
