@@ -1,6 +1,5 @@
 const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('.todo-list');
-const likeButton = document.querySelector('.like');
 
 //addeventlistener("행동", "함수/기능")
 //"keypress" 는 엔터키
@@ -31,6 +30,19 @@ const generateLike = ()=>{
     icon.classList.add("like")
     icon.innerText = "favorite_border"
     span.appendChild(icon);
+    // 좋아요 아이콘 색 변화 조건문 만들기
+    icon.addEventListener("click", () => {
+        // 삼항 연산자. ver
+        icon.innerText === 'favorite_border' ?
+            icon.innerText = "favorite" : icon.innerText = "favorite_border"
+        // 일반 조건문. ver
+        // if (icon.innerText === 'favorite_border') {
+        //     icon.innerText = "favorite"
+        // } else {
+        //     icon.innerText = "favorite_border"
+        // }
+    })
+
     console.log(span)
     return span;
 }
@@ -53,6 +65,14 @@ const generateManage = ()=>{
     icon2.classList.add("material-icons")
     icon2.classList.add("clear")
     icon2.innerText = "clear"
+
+    // manage 에 관리 기능 넣어주기
+    icon1.addEventListener("click",() => {
+        //icon 안에 span 안에 li 를 선택
+        const li = e.target.parentNode.parentNode; 
+        li.classList.add('done')
+        console.log(li)
+    })
     span.appendChild(icon1);
     span.appendChild(icon2);
     return span;
