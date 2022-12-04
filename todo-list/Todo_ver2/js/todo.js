@@ -67,11 +67,17 @@ const generateManage = ()=>{
     icon2.innerText = "clear"
 
     // manage 에 관리 기능 넣어주기
-    icon1.addEventListener("click",() => {
+    icon1.addEventListener("click",(e) => {
         //icon 안에 span 안에 li 를 선택
         const li = e.target.parentNode.parentNode; 
         li.classList.add('done')
         console.log(li)
+    })
+
+    // 삭제하는 기능 넣어주기
+    icon2.addEventListener("click", (e) => {
+        const li = e.target.parentNode.parentNode;
+        todoList.removeChild(li)
     })
     span.appendChild(icon1);
     span.appendChild(icon2);
