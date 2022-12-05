@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 검색</title>
+    <link rel="stylesheet" href="css/weather.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>날씨 검색</h1>
+            <select id="weather-select">
+                <option value="seoul">서울</option>
+                <option value="pyeongyang">평양</option>
+                <option value="daegu">대구</option>
+                <option value="busan">부산</option>
+            </select>
+        </header>
+        <section class="main-section">
+            <div class="info">
+                <p class="location">서울</p>
+                <p class="temperature">
+                    <span>3</span>&deg;C 
+                    <!-- &deg는 몇 도씨 할 때 '도' 관련 사이트는-->
+                    <!-- entitycode.com -->
+                </p>
+                <p class="weather">
+                    <img src="https://placeimg.com/50/50" alt="1">
+                </p>
+                <p class="details">
+                    <span class="feel-like">체감<span>7</span>&deg;C</span>
+                    <span class="wind">초속<span>7</span>m/s</span>
+                </p>
+            </div>
+            <img id="spinner" src="https://placeimg.com/50/50" alt="2">
+        </section>
+
+    </div>
+    
+
+    <script src="js/weather.js"></script>
+</body>
+</html>
