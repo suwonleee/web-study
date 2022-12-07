@@ -48,7 +48,7 @@ select {
     font-size: 24px;
     color: var(--primary);
 }
-.temperature {~
+.temperature {
     font-size: 24px;
 }
 .temperature > span {
