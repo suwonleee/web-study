@@ -9,6 +9,10 @@ const temperatureDisplay = document.querySelector(".temperature > span");
 const weatherSelect = document.querySelector("#weather-select");
 const info = document.querySelector(".info");
 
+weatherSelect.addEventListener("change",(e) => {
+    // 변경을 해줄 때마다, 변경된 도시 이름 불러와주기
+    getWeather(e.target.value)
+})
 
 const getWeather = async (city = 'seoul') => {
      //도시명은 생성마다 다르게 함수 변수로 지정, 디폴트 값은 서울로 지정
@@ -18,10 +22,10 @@ const getWeather = async (city = 'seoul') => {
     //디스트럭쳐링
     // 계속 api data 안에 값들을 불러와야해서 이것들을 구조화 해준 뒤, 불러오기 편하게 만들기
      //
-    const response = await axios.get(url);// 응답 오는걸 기다렸다가 응답 출력
+    const response = await axios.get(urlCity);// 응답 오는걸 기다렸다가 응답 출력
     const { name, main, weather, wind } = response.data;
-    locationDisplay.innerText = name // 글자 서울로 바꾸기 원래는 response.data.name
-    temperatureDisplay.innerText = transferTemparture(main.temp) //온도 불러오고 상대 온도로 바꾸기
+    locationDisplay.innerText = name; // 글자 서울로 바꾸기 원래는 response.data.name
+    temperatureDisplay.innerText = transferTemparture(main.temp); //온도 불러오고 상대 온도로 바꾸기
     weatherDisplay.setAttribute('src', `http://openweathermap.org/img/wn/${weather[0].icon}.png`); //날씨 데이터 리스트 첫번째 icon을 이용해서 html 안 아이콘 바꾸기
     windDisplay.innerText = wind.speed; // 초속
     feelLikeDisplay.innerText = transferTemparture(main.feels_like); //체감 온도
