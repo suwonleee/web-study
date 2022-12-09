@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        엑셀 업로드: <input type="file" id="excelFile" onchange="excelExport(event)"/>
+
+
+        
+    </p>
+    <!-- <script src="sheetjs/dist/xlsx.full.min.js"></script>
+    <script src="FileSaver/dist/FileSaver.min.js"></script> -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script>
+        function excelExport(event){
+            let input = event.target;
+            let reader = new FileReader();
+            reader.onload = function(){
+                let fileData = reader.result;
+                let wb = XLSX.read(fileData,{type:'binary'})
+                wb.SheetNames.forEach(function(sheetName){
+                    let rowObj = XLSX.utils.sheet_to_json(wb.Sheets[sheetName])
+                    console.table(rowObj)
+                })
+
+            }
+            reader.readAsBinaryString(input.files[0])            
+        }
+    </script>
+</body>
+</html>
+
