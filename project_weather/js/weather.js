@@ -27,12 +27,14 @@ const getWeather = async (city = 'seoul') => {
     const { name, main, weather, wind } = response.data;
     locationDisplay.innerText = name; // 글자 서울로 바꾸기 원래는 response.data.name
     temperatureDisplay.innerText = transferTemparture(main.temp); //온도 불러오고 상대 온도로 바꾸기
-    weatherDisplay.setAttribute('src', `http://openweathermap.org/img/wn/${weather[0].icon}.png`); //날씨 데이터 리스트 첫번째 icon을 이용해서 html 안 아이콘 바꾸기
+
+    //날씨 데이터 리스트 첫번째 icon을 이용해서 html 안 아이콘 바꾸기
+    weatherDisplay.setAttribute('src', `http://openweathermap.org/img/wn/${weather[0].icon}.png`); 
     windDisplay.innerText = wind.speed; // 초속
     feelLikeDisplay.innerText = transferTemparture(main.feels_like); //체감 온도
 }
 
-
+// 상대 온도 변화식 저장
 const transferTemparture = (temp) => {
     return (temp - 273.15).toFixed(1); // 273.15 상대 온도로 바꾼 뒤 소수정 한자리까지
 }
