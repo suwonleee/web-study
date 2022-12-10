@@ -27,8 +27,9 @@
 
     <div class="container">
         <div class="jumbotron" id="jumbotron">
-            <h1 class="display-4">평론가님들마다 다른 평론?</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 class="display-4"> 평론을 남겨보고, 다른 사람들의 감상평을 확인 해보세요.</h1>    <!-- 제목 부분 -->
+
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>     <!-- 제목 밑에 리드 설명 부분 -->
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                 <!-- 버튼 색깔 바꾸기-->
@@ -36,7 +37,7 @@
           </div>
           <div class="row row-cols-1 row-cols-md-3" id="movie-list">
             <div class="col mb-4">
-              <div class="card" style="width: 18rem;">
+              <div class="card" style="width: 18rem;">     <!-- 영화 들어가는 제목 부분 -->
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
@@ -66,27 +67,27 @@
           </div>
     </div>
        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>     <!-- 제이쿼리 불러오기 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>     <!-- 부트스트랩 불러오기 -->
         <script>
             let target_movie = 0;
             $(document).ready(function(){
-                console.log("환영합니다")
+                console.log("환영합니다") //함수 작동 확인
 
                 $.ajax({
                     //개발자가 정해놓은 웹사이트 주소
                     url:"https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&page=1",
                     data:{},
-                    // GET 방식으로 서버 데이터를 받아온다
-                    //만약 POST 방식으로 진행하고 싶으면, type:"POST" 로 바꾸고,
+                    // GET 방식으로 서버 데이터를 받아온다    ->     만약 POST 방식으로 진행하고 싶으면, type:"POST" 로 바꾸고,
                     // data 에 {"key":"value"} 값 기입
+
                     type: "GET", // HTTP 요청 방식(GET, POST)
-                    success:function(json){
+                    success:function(json){ // GET 방식이 성공했을시, 
                         console.log(json)
 
                         $("#movie-list").html('')
-                        let image_host = "https://image.tmdb.org/t/p/w500/"
-                        let movie_list = json.results;
+                        let image_host = "https://image.tmdb.org/t/p/w500/" //이미지 불러오는 주소
+                        let movie_list = json.results; //리스트를 결과로 
 
                         for(let i=0; i<movie_list.length; i++){
                           let card = `<div class="col-sm" style="margin-top:10px;border:none">
@@ -97,7 +98,7 @@
                                   <a href="#!" class="btn btn-success" style="width:100%" onclick=review(${movie_list[i].id})>후기 보기</a>
                                   </div>
                               </div>
-                          </div>`
+                          </div>` // poster_path를 지정해주어 사진을 불러온다. 제목은 title
 
                           $("#movie-list").append(card)
                         }
@@ -111,7 +112,7 @@
                 target_movie = id;
                 $(".modal-body").html('')
                 $.ajax({
-                    // 
+                    
                     url: `/review/read?movie_id=${target_movie}`, // 클라이언트가 요청을 보낼 서버의 URL 주소
                     data:{}, // HTTP 요청과 함께 서버로 보낼 데이터 POST 방식에서만 사용
                     type:"GET",// HTTP 요청 방식(GET, POST)
@@ -120,7 +121,7 @@
                         let reviews = json.data;
                         $(".modal-body").html('')
                         for(let i=0; i<reviews.length; i++){
-                            $(".modal-body").append(`<p>${reviews[i].review}</p>`)
+                            $(".modal-body").append(`<p>${reviews[i].review}</p>`) // i번째 영화 기존 리뷰 불러오기.
                         }
                     },
                     error:function(e){
@@ -142,7 +143,7 @@
                         movie_id:target_movie,
                         review:review
                     }, // HTTP 요청과 함께 서버로 보낼 데이터 POST 방식에서만 사용
-                    type: "POST", // HTTP 요청 방식(GET, POST)
+                    type: "POST", // HTTP 요청 방식(POST)  ->  받아오는 GET과는 다르게 보내는 POST
                     success:function(json){
                       console.log(json)
                       if(json.success == 200){
@@ -158,7 +159,7 @@
                 })
 
                 $(".modal-body").append(review_html);
-                $("#review").val('');   
+                $("#review").val('');   //추가 후 다시 공백으로 만들어주기
             }
             
 </script>
