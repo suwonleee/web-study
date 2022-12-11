@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="node_modules/toastify-js/src/toastify.js"></script>
+    <link rel="stylesheet" href="node_modules/toastify-js/src/toastify.css">
 </head>
 <body>
-    
+    <button onclick="show()">toast</button>
+    <script>
+        function show(){
+            Toastify({
+                text: "This is a toast",
+                duration: 3000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){} // Callback after click
+            }).showToast();
+        }
+    </script>
 </body>
 </html>
