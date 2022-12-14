@@ -105,3 +105,9 @@ li {
     background-position-x: -300px;
     background-position-y: -300px;    
 }
+.complete {
+    position: absolute;
+    font-size: 45px;
+    color: coral;
+    display: none;
+}
