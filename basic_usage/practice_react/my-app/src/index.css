@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  padding: 30px;
+}
+
+.countNum {
+  font-size: 50px;
+  color: goldenrod;
+}
