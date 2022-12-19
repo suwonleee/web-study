@@ -1,3 +1,5 @@
+// 클릭할 때마다 숫자가 올라가는 예시
+
 // import logo from './logo.svg';
 import React,{useState} from 'react'
 import './basic.css';

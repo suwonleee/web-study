@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from 'react-router-dom' //웹 브라우저 라우팅할 때 가장 많이 쓰는
 import './index.css';
-import App from './App';
+import App from './App'; //확장자 js 생략
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
-    <App />
+    <BrowserRouter> 
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
