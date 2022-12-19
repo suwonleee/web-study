@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  margin : 50px;
+  border: 1px solid rebeccapurple;
+  width: 100px;
+  height: 100px;
+}

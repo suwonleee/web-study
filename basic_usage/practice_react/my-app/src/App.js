@@ -1,20 +1,8 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <main>
-      <div className='box'>
-        BOX1
-        SOOWON
-      </div>
-
-      <div className='box'>
-        BOX2
-        SOOWON
-      </div>
-    </main>
-  );
+  <div className='box'>안녕하세요</div>
 }
 
 export default App;
