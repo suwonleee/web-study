@@ -2,6 +2,7 @@
 import React from "react";
 import {Routes, Route, Link} from "react-router-dom";
 
+//각 페이지를 그대로 불러와서 import 해주기
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Counter from "./pages/Counter";
@@ -9,6 +10,7 @@ import Input from "./pages/Input";
 import Input2 from "./pages/Input2_case";
 import List from "./pages/List";
 
+//App을 실행했을 때
 function App() {
   return (
     <div className="App">

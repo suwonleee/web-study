@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
+    {/* 브라우저 라우팅할 때 가장 많이 쓰는 */}
     <BrowserRouter> 
+    {/* 앱 실행하기 */}
       <App />
     </BrowserRouter>
   </React.StrictMode>
