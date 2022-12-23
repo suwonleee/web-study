@@ -65,3 +65,34 @@ console.log("== 객체의 모든 요소를 반복하는 방법, 값 ==");
 for ( const key in obj ) {
   console.log(obj[key]);
 }
+
+// *************************************
+// 3. 객체를 만드는 다양한 방법.
+console.clear();
+
+const age = 12;
+
+const obj1 = {
+  "age":age
+};
+
+const obj2 = {
+  age:age
+};
+
+const obj3 = {
+  age
+};
+
+const obj4 = {};
+obj4['age'] = age;
+
+const obj5 = {};
+obj5.age = age;
+
+const obj6 = {
+  ...obj5,
+  name:"Paul"
+};
+
+console.log(obj6);
