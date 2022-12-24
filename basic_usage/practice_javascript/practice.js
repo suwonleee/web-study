@@ -6,14 +6,20 @@ console.clear();
 console.log('== let ==');
 let age1 = 20;
 console.log('age1 : ' + age1);
+//"age1 : 20"
+
 age1 = 30; // 변경가능
 console.log('age1 : ' + age1);
+//"age1 : 30"
 
 console.log('== const ==');
 const age2 = 20;
 console.log('age2 : ' + age2);
+//"age2 : 20"
+
 // age2 = 30; // 불가능
 console.log('age2 : ' + age2);
+//"age2 : 20"
 
 //****************************** */
 //2. 배열과 객체
@@ -35,16 +41,21 @@ obj['name'] = "홍길동";
 
 console.log("== 배열 엘리먼트에 접근하는 방법 ==");
 console.log(arr[0]);
+// 10
 
 console.log("== 객체 엘리먼트에 접근하는 방법 ==");
 console.log(obj['age']);
+// 12
 console.log(obj.age);
+// 12
 
 console.log("== 배열 엘리먼트 개수를 알아내는 방법 ==");
 console.log(arr.length);
+// 8
 
 console.log("== 객체 엘리먼트 개수를 알아내는 방법 ==");
 console.log(Object.keys(obj).length);
+// 4
 
 console.log("== 배열의 모든 요소를 반복하는 방법, 전통적인 for ==");
 for ( let i = 0; i < arr.length; i++ ) {
