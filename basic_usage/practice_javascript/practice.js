@@ -61,21 +61,26 @@ console.log("== 배열의 모든 요소를 반복하는 방법, 전통적인 for
 for ( let i = 0; i < arr.length; i++ ) {
   console.log(arr[i]);
 }
+// 10 20 30 40 50 60 70 100
 
 console.log("== 배열의 모든 요소를 반복하는 방법, of ==");
 for ( const value of arr ) {
   console.log(value);
 }
+// 10 20 30 40 50 60 70 100
 
 console.log("== 객체의 모든 요소를 반복하는 방법, 키 ==");
 for ( const key in obj ) {
   console.log(key);
 }
+//gender height age name
 
 console.log("== 객체의 모든 요소를 반복하는 방법, 값 ==");
 for ( const key in obj ) {
   console.log(obj[key]);
 }
+//"남자" 178.34 12 "홍길동"
+
 
 // *************************************
 // 3. 객체를 만드는 다양한 방법.
