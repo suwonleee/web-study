@@ -112,3 +112,5 @@ const obj6 = {
 };
 
 console.log(obj6);
+// "age" : 12
+// "name" : "Paul"
