@@ -114,3 +114,15 @@ const obj6 = {
 console.log(obj6);
 // "age" : 12
 // "name" : "Paul"
+
+// *************************************
+// 4. 삼항 연산자.
+console.clear();
+
+
+const age = 19;
+
+const adultStr = age >= 20 ? "성년" : "미성년";
+
+console.log(adultStr);
+//미성년
