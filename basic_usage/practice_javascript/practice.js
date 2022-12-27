@@ -120,9 +120,76 @@ console.log(obj6);
 console.clear();
 
 
-const age = 19;
+const ageChecking = 19;
 
-const adultStr = age >= 20 ? "성년" : "미성년";
+const adultStr = ageChecking >= 20 ? "성년" : "미성년";
 
 console.log(adultStr);
 //미성년
+// *************************************
+// 5. 삼항 연산자.
+console.clear();
+
+console.log("== falsy test ==");
+console.log(false ? "false is not falsy" : "false is falsy");
+//"false is falsy"
+
+console.log(0 ? "0 is not falsy" : "0 is falsy");
+//"0 is falsy"
+
+console.log(null ? "null is not falsy" : "null is falsy");
+//"null is falsy"
+
+console.log(undefined ? "null is not falsy" : "undefined is falsy");
+//"undefined is falsy"
+
+console.log(NaN ? "NaN is not falsy" : "NaN is falsy");
+//"NaN is falsy"
+
+console.log('' ? "'' is not falsy" : "'' is falsy");
+//"'' is falsy"
+
+console.log('a' ? "'a' is not falsy" : "'a' is falsy");
+//"'a' is not falsy"
+
+console.log(1 ? "1 is not falsy" : "1 is falsy");
+//"1 is not falsy"
+
+console.log([] ? "[] is not falsy" : "[] is falsy");
+//"[] is not falsy"
+
+console.log({} ? "{} is not falsy" : "{} is falsy");
+//"{} is not falsy"
+
+console.log("== same test ==");
+console.log("0 == false : " + (0 == false));
+//"0 == false : true"
+
+console.log("0 === false : " + (0 === false)); // === 는 엄격하게 비교합니다.
+//"0 === false : false"
+
+console.log("0 == '' : " + (0 == ''));
+//"0 == '' : true"
+
+console.log("0 == null : " + (0 == null));
+//"0 == null : false"
+
+console.log("undefined == null : " + (undefined == null));
+//"undefined == null : true"
+
+console.log("NaN == false : " + (NaN == false));
+//"NaN == false : false"
+
+console.log("NaN == null : " + (NaN == null));
+//"NaN == null : false"
+
+console.log("== undefined test ==");
+let a;
+console.log("a == undefined : " + (a == undefined));
+//"a == undefined : true"
+
+console.log("== NaN test ==");
+console.log("10 * 'a' : " + (10 * 'a'));
+//"10 * 'a' : NaN"
+
+// *************************************
