@@ -40,6 +40,7 @@ console.log(`plus7 : ` + plus7());
 //"plus7 : 30"
 
 // 수정가능지역 끝
+
 // *************************************
 // 2. map (함수)
 console.clear();
@@ -57,3 +58,15 @@ const resultArr = arr.map((el) => el * el);
 
 console.log("arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : " + resultArr);
 //"arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : 1,9,25,49,81"
+
+// *************************************
+// 3. filter (함수)
+
+const arr = [1, 4, 7, 10];
+
+// 수정가능지역 시작
+const resultArr = arr.filter((item) => item % 2 == 0)
+// 수정가능지역 끝
+
+console.log("arr 배열안의 숫자 중 해당 조건에 만족하는것들만 따로 골라낸다면 결과는 : " + resultArr);
+//"arr 배열안의 숫자 중 해당 조건에 만족하는것들만 따로 골라낸다면 결과는 : 4,10"
