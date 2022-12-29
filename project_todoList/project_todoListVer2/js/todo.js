@@ -4,7 +4,7 @@ const todoList = document.querySelector('.todo-list');
 //addeventlistener("행동", "함수/기능")
 //"keypress" 는 엔터키
 todoInput.addEventListener("keypress", function(e){ //' (e) => '  동일 문구
-    // console.log(e) -> 엔터 했을 때 키 속성을 볼 수 있다. 엔터했을때 키코드가 '13'이 된다.
+    // console.log(e) -> 엔터 했을 때 키 속성을 볼 수 있다. 엔터 했을 때 키코드가 '13'이 된다.
     if (e.keyCode === 13) { //엔터키를 한다면
         generateTodo(todoInput.value) //함수로 안에 값 불러오기
         todoInput.value = "" //입력 받고난 뒤 빈값으로 바꾸기

@@ -24,10 +24,10 @@
         <div id="subcontainer">
             <ul class="list-group" id="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center" id="list-group-item">
-                  오늘의 할 일 하나 !
-                  <span class="badge badge-primary badge-pill" onclick="deleteTodo()">완료</span>
+                오늘의 할 일 하나 !
+                <span class="badge badge-primary badge-pill" onclick="deleteTodo()">완료</span>
                 </li>
-              </ul>
+            </ul>
         </div>
         <div class="input-group mb-3" id="input-group">
             <input type="text" class="form-control"
@@ -35,9 +35,9 @@
             
             aria-describedby="button-addon2">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="addTodo()">일정 추가</button>
+            <button class="btn btn-outline-secondary" type="button" id="button-area" onclick="addTodo()">일정 추가</button>
             </div>
-          </div>
+        </div>
     </div>
 <script>
     //웹페이지가 실행 되면 내부에 담긴 함수가 실행되게 만든다.
@@ -72,8 +72,8 @@
         
         //고유한 아이디로 아이디 추가 
         let list_item = `<li class="list-group-item d-flex justify-content-between align-items-center list-${id}" id="list-group-item">
-                  ${todo}
-                  <span class="badge badge-primary badge-pill" onclick="deleteTodo(${id})">완료</span>
+                ${todo}
+                <span class="badge badge-primary badge-pill" onclick="deleteTodo(${id})">완료</span>
         </li>`
 
         $("#list-group").append(list_item)
