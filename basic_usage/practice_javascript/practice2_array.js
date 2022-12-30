@@ -50,23 +50,39 @@ console.clear();
 arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : 1,9,25,49,81
 */
 
-const arr = [1, 3, 5, 7, 9];
+const arr1 = [1, 3, 5, 7, 9];
 
 // 수정가능지역 시작
-const resultArr = arr.map((el) => el * el);
+const resultArr1 = arr1.map((el) => el * el);
 // 수정가능지역 끝
 
-console.log("arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : " + resultArr);
+console.log("arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : " + resultArr1);
 //"arr 배열안의 숫자들이 모두 제곱된 버전의 새로운 배열은 : 1,9,25,49,81"
 
 // *************************************
 // 3. filter (함수)
 
-const arr = [1, 4, 7, 10];
+const arr2 = [1, 4, 7, 10];
 
 // 수정가능지역 시작
-const resultArr = arr.filter((item) => item % 2 == 0)
+const resultArr2 = arr2.filter((item) => item % 2 == 0)
 // 수정가능지역 끝
 
-console.log("arr 배열안의 숫자 중 해당 조건에 만족하는것들만 따로 골라낸다면 결과는 : " + resultArr);
+console.log("arr 배열안의 숫자 중 해당 조건에 만족하는것들만 따로 골라낸다면 결과는 : " + resultArr2);
 //"arr 배열안의 숫자 중 해당 조건에 만족하는것들만 따로 골라낸다면 결과는 : 4,10"
+
+// *************************************
+// 4. indexOf (함수)
+
+/*
+// 출력예시
+가장 앞에있는 `60`의 위치는 5 입니다.
+*/
+
+const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 60, 70];
+
+// 수정가능지역 시작
+const index = arr.indexOf(60);
+// 수정가능지역 끝
+
+console.log(`가장 앞에있는 \`60\`의 위치는 ${index} 입니다.`);
