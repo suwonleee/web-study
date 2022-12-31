@@ -1,3 +1,5 @@
+//useRef를 사용해서 dom 조작하기
+
 import React, { useState, useRef } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
