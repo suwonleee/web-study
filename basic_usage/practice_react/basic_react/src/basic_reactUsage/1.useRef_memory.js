@@ -19,7 +19,7 @@ function App() {
 
     setRecordedNos([...recordedNos, no]);
     setNo("");
-    noInputRef.current.focus();
+    noInputRef.current.focus(); //입력 행위 후 다시 포커스를 입력 창으로 바꿔주기
   };
 
   //const li = [1, 2, 3].map((el, index) => <li key={index}>{el}</li>);
@@ -45,16 +45,19 @@ function App() {
       <hr />
 
       <h1>기록된 숫자 v1</h1>
-      {recordedNos.join(",")}
+      {/* 새로운 숫자 추가해주는 방법 1 */}
+      {recordedNos.join(",")} 
 
       <hr />
 
       <h1>기록된 숫자 v2</h1>
+      {/* 새로운 숫자 추가해주는 방법 2 */}
       <ul>{li}</ul>
 
       <hr />
 
       <h1>기록된 숫자 v2-2</h1>
+      {/* 새로운 숫자 추가해주는 방법 3 */}
       <ul>
         {recordedNos.map((el, index) => (
           <li key={index}>{el}</li>
