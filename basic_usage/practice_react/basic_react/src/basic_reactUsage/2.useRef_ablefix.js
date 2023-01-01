@@ -2,6 +2,8 @@
 // 0 : 5 삭제 +1 -1 0
 // 1 : 10 삭제 +1 -1 0
 
+
+//useRef를 사용하기 위해선 이렇게 입력해준다.
 import React, { useState, useRef } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
@@ -33,7 +35,7 @@ function App() {
     //숫자를 입력 받았을 때
     setRecordedNos([...recordedNos, no]); //기존에 있는 recordedNos 에 no 추가
     setNo("");
-    noInputRef.current.focus();
+    noInputRef.current.focus(); //입력 받은 현재 파트에 포커스 가져오기
   };
   
   const removeNo = (index) => { //삭제 했을 때 동작 규정
@@ -56,9 +58,9 @@ function App() {
           saveNo();
         }}
       >
-        <input
+        <input //input에 ref를 사용하면 이렇게 값에 접근해서 값을 사용할 수 있다.
           type="number"
-          ref={noInputRef}
+          ref={noInputRef} //특정 엘리먼트에 심어둘 수 있다.
           value={no}
           onChange={(e) => setNo(e.target.valueAsNumber)}
         />
