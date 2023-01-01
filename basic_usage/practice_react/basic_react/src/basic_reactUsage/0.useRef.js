@@ -1,4 +1,7 @@
 //useRef를 사용해서 dom 조작하기
+//입력한 숫자 alert에 표시하기
+
+// 숫자 입력 -> 당신이 입력한 숫자는 {숫자} 입니다.
 
 import React, { useState, useRef } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";

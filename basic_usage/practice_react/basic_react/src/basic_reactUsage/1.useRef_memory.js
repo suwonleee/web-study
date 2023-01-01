@@ -1,4 +1,8 @@
 //숫자기록입력상자에 useRef를 이용하여 dom 조작
+// 숫자를 입력해서 기록하기
+// v1 정답 예시 : 10, 20, 30
+// v2 정답 예시 : li로 표기된 10, 20, 30
+// v2-2 정답 예시 : li로 표기된 10, 20, 30
 
 import React, { useState, useRef } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
@@ -16,8 +20,8 @@ function App() {
       alert("숫자를 입력해주세요.");
       return;
     }
-
-    setRecordedNos([...recordedNos, no]);
+    //setRecordedNos에 복사 해주기
+    setRecordedNos([...recordedNos, no]); //기존 recordedNos에 no 추가 
     setNo("");
     noInputRef.current.focus(); //입력 행위 후 다시 포커스를 입력 창으로 바꿔주기
   };
