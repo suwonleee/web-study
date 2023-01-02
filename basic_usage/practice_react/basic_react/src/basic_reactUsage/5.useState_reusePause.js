@@ -13,7 +13,7 @@ function NotifyOnce({ children }) {
   const [visible, setVisible] = useState(false);
   const [workDone, setWorkDone] = useState(false);
   
-  //false이면 작동하게 만들기 -> 최초 한번만
+  //false이면 작동하게 만들기 -> 최초 한번만 그 이후 안 나타나게
   if ( workDone == false ) {
     setTimeout(function () {
       setVisible(true);
@@ -31,10 +31,10 @@ function NotifyOnce({ children }) {
       className={classnames(
         "fixed transition-all right-[10px]",
         {
-          "top-[-60px]": !visible
+          "top-[-60px]": !visible  //visible이 아닐 경우 사라지기
         },
         {
-          "top-[10px]": visible
+          "top-[10px]": visible  //visible일 경우 보이기
         }
       )}
     >
@@ -43,7 +43,8 @@ function NotifyOnce({ children }) {
   );
 }
 
-function Alert({ color: color_, children }) {
+function Alert({ color: color_, children }) { //원래 색깔일 경우 변수 지정
+  // 아닐경우 화이트
   const color = color_ ?? "white";
 
   return (
