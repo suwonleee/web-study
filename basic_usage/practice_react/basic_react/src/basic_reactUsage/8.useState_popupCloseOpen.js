@@ -11,6 +11,10 @@ function App() {
   
   return (
     <>
+      {/* {popupVisible || <button onClick={() => setPopupVisible(true)}>팝업열기</button>}
+      {popupVisible && <button onClick={() => setPopupVisible(false)}>팝업닫기</button>} */}
+
+      {/* 위 두줄을 밑에 한줄로 요약할 수 있다. */}
       <button onClick={() => setPopupVisible(!popupVisible)}>
         팝업{popupVisible ? "닫기" : "열기"}
       </button>
