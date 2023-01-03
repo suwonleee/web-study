@@ -6,6 +6,18 @@ import ReactDOM from "https://cdn.skypack.dev/react-dom";
 let AppCallCount = 0;
 
 function ProdListItem({ imgNo, name, price }) { //제품마다 변수를 받아와 다르게 구성
+  /*
+  // 제품 변수 방법 1
+  const { imgNo, name, productPriceFormatted } = props;
+  
+  const productName = name;
+  */
+
+  /*
+  // 제품 변수 방법 2
+  const { imgNo, name:productName, productPriceFormatted } = props;
+  */
+
   return (
     <>
       {/* flex-col로 제품의 배열 맞추기  */}
