@@ -26,7 +26,7 @@ function App() {
     <>
       <form
         onSubmit={(e) => {
-          e.preventDefault();
+          e.preventDefault(); //폼이 전송되는 것을 막기.
           notice();
         }}
       >

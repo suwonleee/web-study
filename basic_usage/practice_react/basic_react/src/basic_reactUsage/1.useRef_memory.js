@@ -14,17 +14,17 @@ function App() {
   const [no, setNo] = useState("");
 
   const [recordedNos, setRecordedNos] = useState([10, 20, 30]);
-
-  const saveNo = () => {
+  const saveNo = () => {	
     if (no === "") { //비어있을 경우
       alert("숫자를 입력해주세요.");
-      return;
     }
     //setRecordedNos에 복사 해주기
+    
     setRecordedNos([...recordedNos, no]); //기존 recordedNos에 no 추가 
     setNo("");
-    noInputRef.current.focus(); //입력 행위 후 다시 포커스를 입력 창으로 바꿔주기
+    noInputRef.current.focus();//입력 행위 후 다시 포커스를 입력 창으로 바꿔주기
   };
+  
 
   //const li = [1, 2, 3].map((el, index) => <li key={index}>{el}</li>);
   const li = recordedNos.map((el, index) => <li key={index}>{el}</li>);
@@ -33,8 +33,8 @@ function App() {
     <>
       <form
         onSubmit={(e) => {
-          e.preventDefault();
-          saveNo();
+          e.preventDefault(); //폼이 전송되는 것을 막기.
+          saveNo();	
           // prevent 막는다.
           // Default 기본적으로.
           // 활용예
@@ -45,8 +45,8 @@ function App() {
       >
         <input
           type="number"
-          ref={noInputRef}
-          value={no}
+          ref={noInputRef}	
+          value={no}	
           onChange={(e) => setNo(e.target.valueAsNumber)}
         />
         <button type="submit">기록</button>
