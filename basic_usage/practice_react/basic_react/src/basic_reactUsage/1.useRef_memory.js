@@ -35,6 +35,12 @@ function App() {
         onSubmit={(e) => {
           e.preventDefault();
           saveNo();
+          // prevent 막는다.
+          // Default 기본적으로.
+          // 활용예
+          // EX : 링크를 클릭시 이동을 막는다.
+          // EX : 폼 전송 클릭 => 폼이 발송되는 것을 막는다.
+          // EX 마우스 휠 => 세로 스크롤바 이동을 막는다.
         }}
       >
         <input
