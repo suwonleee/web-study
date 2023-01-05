@@ -14,6 +14,7 @@ function App() {
   const noInputRef = useRef(null);
   const [no, setNo] = useState("");
 
+  //초기 숫자도 포함.
   const [recordedNos, setRecordedNos] = useState([
     5,
     10,
@@ -26,23 +27,28 @@ function App() {
     5
   ]);
 
+  //입력창에 숫자를 입력해주는 경우
   const saveNo = () => {
-    if (no === "") {
+    if (no === "") { // 아무것도 입력 안 한 경우
       alert("숫자를 입력해주세요.");
       return;
     }
-
+    //입력 받은 숫자를 기록.
     setRecordedNos([...recordedNos, no]);
     setNo("");
     noInputRef.current.focus();
   };
   
+  //숫자를 제거해주는 경우
   const removeNo = (index) => {
+    //삭제 해줄 땐 filter를 사용해서
     const newRecordedNos = recordedNos.filter((_, _index) => _index != index);
     setRecordedNos(newRecordedNos);
   };
   
+  //있는 숫자를 버튼으로 수정해주는 경우
   const modifyNo = (index, newNo) => {
+    //수정해줄 땐 map을 사용해서 !!
     const newRecordedNos = recordedNos.map((el, _index) => _index == index ? newNo : el);
     setRecordedNos(newRecordedNos);
   };
@@ -68,6 +74,7 @@ function App() {
 
       <h1>기록된 숫자</h1>
       <ul>
+      {/* 수정해줄 땐 map을 사용해서 !! */}
         {recordedNos.map((el, index) => (
           <li key={index} style={{display:"flex",gap:20}}>
             <span>{index} : </span>
