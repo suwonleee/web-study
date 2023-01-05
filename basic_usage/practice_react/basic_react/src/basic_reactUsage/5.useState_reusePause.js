@@ -1,12 +1,47 @@
 // useState만 이용해서 재사용 방지하고, 한번만 나왔다가 들어가는 팝업 활용
 
-// "팝업 " 한번 나왔다가 들어감 -> 몇초 나왔다가 사라지기 & 최초 한번만.
+// ** Q. "팝업 " 한번 나왔다가 들어감 -> 몇초 나왔다가 사라지기 & 최초 한번만.
 
 import React, { useState } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 import classnames from "https://cdn.skypack.dev/classnames";
 
 let AppCallCount = 0;
+
+// ** 비교 -> true false 이용해서도 사용할 수 있음.
+// false 로 우선 지정하고,
+// let NotifyOnce__workDone = false;	
+// function NotifyOnce({ children }) {	
+//   const [visible, setVisible] = useState(false);	
+
+// 여기가 다른 부분 -> false 일 경우,
+//   if ( NotifyOnce__workDone == false ) {	
+//     setTimeout(function () {	
+//       setVisible(true);	
+//     }, 1000);	
+//     setTimeout(function () {	
+//       setVisible(false);	
+//     }, 3000);	
+//      완료 후 true 로 바꿔주기
+//     NotifyOnce__workDone = true;	
+//   }
+		
+//   return (	
+//     <div	
+//       className={classnames(	
+//         "fixed transition-all right-[10px]",	
+//         {	
+//           "top-[-60px]": !visible	
+//         },	
+//         {	
+//           "top-[10px]": visible	
+//         }	
+//       )}	
+//     >	
+//       {children}	
+//     </div>	
+//   );	
+// }
 
 function NotifyOnce({ children }) {
   //useState 활용해서 해결하기
