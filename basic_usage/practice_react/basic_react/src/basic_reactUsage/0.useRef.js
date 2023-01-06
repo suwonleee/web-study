@@ -7,11 +7,11 @@ import React, { useState, useRef } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
 
 function App() {
-  const formInputNoRef = useRef(null); //useRef 이렇게 사용해준다.
+  const formInputNoRef = useRef(null); //useRef 만들기 DOM 조작을 위해서 변수 지정
   const [no, setNo] = useState("");
 
   const notice = () => {
-    formInputNoRef.current.focus(); //입력 행위 후 다시 포커스를 입력 창으로 바꿔주기
+    formInputNoRef.current.focus(); //Ref로 엘리먼트 컨트롤 해주게 만들어줌.
     
     if (!no) {
       alert("숫자를 입력해주세요.");
@@ -27,11 +27,11 @@ function App() {
       <form
         onSubmit={(e) => {
           e.preventDefault(); //폼이 전송되는 것을 막기.
-          notice();
+          notice(); // 버튼을 누르면 커런트 포커스로 이동
         }}
       >
         <input
-          ref={formInputNoRef}
+          ref={formInputNoRef} // 내가 만든 useRef를 장착 시키기. -> 특정 엘리먼트를 DOM 조작해주기 위해서
           type="text"
           placeholder="숫자"
           value={no}

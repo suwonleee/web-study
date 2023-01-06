@@ -63,7 +63,7 @@ function App() {
       >
         <input
           type="number"
-          ref={noInputRef}
+          ref={noInputRef}// 내가 만든 useRef를 장착 시키기. -> 특정 엘리먼트를 DOM 조작해주기 위해서
           value={no}
           onChange={(e) => setNo(e.target.valueAsNumber)}
         />
