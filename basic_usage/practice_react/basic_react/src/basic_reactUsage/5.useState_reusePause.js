@@ -61,15 +61,20 @@ function NotifyOnce({ children }) {
     setWorkDone(true);
   }
 
+  // *** classnames 개념 -> 내가 생각했던거랑 좀 다른 부분 
+  // classnames('a','b','c', {'d' : true}) == a b c d
+  // classnames('a b c', {'d' : true}) == a b c d
+  // classnames('a b c', {'d' : false}) == a b c
   return (
     <div
       className={classnames(
         "fixed transition-all right-[10px]",
         {
-          "top-[-60px]": !visible  //visible이 아닐 경우 사라지기
+          //classnames 에서는 false 가 되면 실행 안된다.
+          "top-[-60px]": !visible  //visible이 아닐 경우 -60px로 화면에서 사라지기
         },
         {
-          "top-[10px]": visible  //visible일 경우 보이기
+          "top-[10px]": visible  //visible일 경우 화면에 보이기
         }
       )}
     >
