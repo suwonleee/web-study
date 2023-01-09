@@ -1,5 +1,5 @@
 // 타이팅이 늦어져야 하는 경우, useRef, useEffect 조합
-// ** Q. 증가 버튼을 누르면 ->  숫자가 증가 되면서 나이에 포커스가 잡히게 만들기
+// ** Q. 최초에는 이름에 포커스가 되어있고 -> 증가 버튼을 누르면 -> 숫자가 증가 되면서 나이에 포커스가 잡히게 만들기
 
 import React, {
   useState,
@@ -18,8 +18,15 @@ function App() {
   useEffect(() => {
     inputNameRef.current.focus(); //Ref로 엘리먼트 컨트롤 해주게 만들어줌.
   }, []);
-  // [] 리스트를 작성하면 살짝느리게 실행
-  
+  // 최초 앱 실행에 inputNameRef 포커스 Effect -> 이후엔 나이에 포커스
+  // [] 리스트를 작성하면 딱 한번만 앱이 실행된다. & 살짝 타이밍 늦게 실행 
+
+  // });
+  // 만약 [] 리스트 없이 실행한다면 ? -> inputNameRef 계속 포커스
+
+  // 원래 우리가 Ref 사용해서 늦게 실행되게 만들던 방식
+  // setTimeout(() => inputNameRef.current.focus(), 1000);
+
   return (
     <>
       <input ref={inputNameRef} type="text" placeholder="이름" /> 

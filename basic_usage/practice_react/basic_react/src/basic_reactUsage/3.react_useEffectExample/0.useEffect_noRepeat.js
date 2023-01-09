@@ -13,6 +13,8 @@ function App() {
     AppCallCount++; //리랜더링 될 때 마다 App call 변수를 하나 더해주기
     console.log(`App이 ${AppCallCount}번 실행됨!`);
   }, []);
+  // [] 이렇게 코드 적으면, 딱 최초 앱 실행만 !! [] 이 리스트 때문에.
+  // & 살짝 타이밍 늦게 실행
   
   const [no, setNo] = useState(0);
 
