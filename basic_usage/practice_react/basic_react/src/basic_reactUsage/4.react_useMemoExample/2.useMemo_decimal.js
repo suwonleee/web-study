@@ -41,23 +41,28 @@ function App() {
   AppCallCount++;
   console.log(`AppCallCount : ${AppCallCount}`);
   
+  //useState 변수 적용
   const [inputedNo, setInputedNo] = useState(0);
   const [no, setNo] = useState(0);
   
 
   //useMemo 적용 파트
+  //inputedNo 변수의 값이 바뀌지 않는 한 실제 계산은 반복되지 않는다.
   const primeNumbersCount = useMemo(() => getPrimeNumbersCount(inputedNo), [inputedNo]);
   
   const onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //폼이 전송되는 것을 막기.
     
+    //입력 받은 수를 form 변수에 넣기
     const form = e.target;
     
+    //빈칸 없애기
     form.number.value = form.number.value.trim();
     
+    //숫자 미입력시
     if ( form.number.value.length == 0 ) {
       alert('숫자를 입력해주세요');
-      form.number.focus();
+      form.number.focus(); //숫자에 포커스 해주기
       
       return;
     }
