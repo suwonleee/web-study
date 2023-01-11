@@ -1,5 +1,9 @@
 // 소수 구하기 (useState)
 // 1부터 입력값까지의 소수 개수를 알려주는 프로그램 구현에 state 적용
+//https://codepen.io/suwonleee/pen/KKBmpRd?editors=0011
+
+
+//소수를 구했어도, 다른 버튼을 클릭하면 -> 리랜더링 되면서 다시 계산하는 시간이 걸림.
 
 import React, { useState, useEffect } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";

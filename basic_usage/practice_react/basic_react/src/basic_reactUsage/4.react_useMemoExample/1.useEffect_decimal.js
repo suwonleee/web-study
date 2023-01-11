@@ -1,6 +1,10 @@
 // 소수 구하기 (useEffect)
+// useEffect의 경우 자유도가 높은 대신에, 코드를 좀 더 많이 써야하고, useMemo는 자유도가 낮은 대신에 코드가 더 간결하다.
 //https://codepen.io/suwonleee/pen/wvxJdrV?editors=0010
 // 1부터 입력값까지의 소수 개수를 알려주는 프로그램 구현에 useEffect를 활용
+
+//안에 들어간 숫자가 바꼈을 시만 사용된다. -> 그래서 다른 버튼으로 리랜더링 됐을 때 재실행 안된다.
+//결론 : useState만 사용했을 때보다 더 빠르게 다른 요소를 사용할 수 있다.
 
 import React, { useState, useEffect } from "https://cdn.skypack.dev/react";
 import ReactDOM from "https://cdn.skypack.dev/react-dom";
@@ -49,7 +53,7 @@ function App() {
   useEffect(() => { //useEffect inputedNo 변경시 사용
     const primeNumbersCount = getPrimeNumbersCount(inputedNo);
     setPrimeNumbersCount(primeNumbersCount);
-  }, [inputedNo])
+  }, [inputedNo]) //안에 들어간 숫자가 바꼈을 시만 사용된다. -> 그래서 다른 버튼으로 리랜더링 됐을 때 재실행 안된다
   
   const onSubmit = (e) => {
     e.preventDefault();

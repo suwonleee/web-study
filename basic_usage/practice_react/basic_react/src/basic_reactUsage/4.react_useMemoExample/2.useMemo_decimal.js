@@ -1,4 +1,5 @@
 // 소수 구하기 (useMemo)
+// useEffect의 경우 자유도가 높은 대신에, 코드를 좀 더 많이 써야하고, useMemo는 자유도가 낮은 대신에 코드가 더 간결하다.
 //https://codepen.io/suwonleee/pen/wvxJdrV?editors=0010
 // 1부터 입력값까지의 소수 개수를 알려주는 프로그램 구현에 useMemo 활용
 
@@ -12,17 +13,19 @@ function isPrimeNumber(no) {
     }
     
     if ( no % i == 0 ) {
+      //만약 i로 나누었을 때 나누어 떨어지면, 그 수는 소수가 아니다.
       return false;
     }
   }
-  
+  //나누어 떨어지지 않았다면 소수
   return true;
 }
-
+//소수 가져오기
 function getPrimeNumbers(max) {
   const primeNumbers = [];
   
   for ( let i = 2; i <= max; i++ ){
+    //소수인지 아닌지 체크하는 로직
     if ( isPrimeNumber(i) ) {
       primeNumbers.push(i);
     }
@@ -32,6 +35,7 @@ function getPrimeNumbers(max) {
 }
 
 function getPrimeNumbersCount(max) {
+  //소수의 개수는 ? 
   return getPrimeNumbers(max).length;
 }
 
