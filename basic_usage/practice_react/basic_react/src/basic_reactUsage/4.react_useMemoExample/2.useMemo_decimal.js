@@ -49,9 +49,10 @@ function App() {
   const [inputedNo, setInputedNo] = useState(0);
   const [no, setNo] = useState(0);
   
-
+  //************** 제일 중요한 부분 *******************/
   //useMemo 적용 파트
   //inputedNo 변수의 값이 바뀌지 않는 한 실제 계산은 반복되지 않는다.
+  //한번 계산되면 버튼을 눌렀을 때 getPrimeNumbersCount 함수가 실행되지 않는다.
   const primeNumbersCount = useMemo(() => getPrimeNumbersCount(inputedNo), [inputedNo]);
   
   const onSubmit = (e) => {
